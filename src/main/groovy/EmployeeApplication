@@ -1,0 +1,8 @@
+
+
+class EmployeeApplication {
+
+    static void main(String[] args) {
+        SpringApplication.run(EmployeeApplication, args)
+    }
+}

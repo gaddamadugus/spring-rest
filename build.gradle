@@ -1,0 +1,32 @@
+buildscript {
+    ext {
+        groovyVersion = '2.4.7'
+        springBootVersion = '1.5.6.RELEASE'
+
+    }
+    repositories{
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+plugins {
+    id 'groovy'
+    id 'java'
+    id 'idea'
+    id 'eclipse'
+}
+
+apply plugin : 'org.springframework.boot'
+
+bootRun {
+    systemProperties "user.timezone": "UTC", "spring.profiles.active": "dev"
+}
+
+repositories {
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+}
